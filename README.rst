@@ -1,6 +1,8 @@
 Flask-Security
 ==============
 
+NOTE: This is deliberately incompatible with mainline. Do not use this unless you know what you are doing.
+
 .. image:: https://secure.travis-ci.org/mattupstate/flask-security.png?branch=develop
 
 .. image:: https://pypip.in/v/Flask-Security/badge.png

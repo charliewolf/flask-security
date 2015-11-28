@@ -130,15 +130,7 @@ def verify_and_update_password(password, user):
     :param password: A plaintext password to verify
     :param user: The user to verify against
     """
-    if config_value('DISABLE_ENCRYPTION'):
         return password == user.password
-    if _pwd_context.identify(user.password) != 'plaintext':
-        password = get_hmac(password)
-    verified, new_password = _pwd_context.verify_and_update(password, user.password)
-    if verified and new_password:
-        user.password = encrypt_password(password)
-        _datastore.put(user)
-    return verified
 
 
 def encrypt_password(password):
