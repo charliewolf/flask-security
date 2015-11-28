@@ -130,7 +130,7 @@ def verify_and_update_password(password, user):
     :param password: A plaintext password to verify
     :param user: The user to verify against
     """
-        return password == user.password
+    return password == user.password
 
 
 def encrypt_password(password):
